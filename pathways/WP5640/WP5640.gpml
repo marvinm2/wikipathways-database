@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Curator app test pathway" Data-Source="WikiPathways" Version="WP5640_r20260724135538" Author="[marvinm2]" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Small test pathway submitted through the wikipathways-submit app to verify the end-to-end flow.</Comment>
+  <DataNode TextLabel="TP53" Type="GeneProduct">
+    <Xref Database="Ensembl" ID="ENSG00000141510" />
+  </DataNode>
+  <DataNode TextLabel="MDM2" Type="GeneProduct">
+    <Xref Database="Ensembl" ID="ENSG00000135679" />
+  </DataNode>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+</Pathway>
