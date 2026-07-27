@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway Version="WP5641_r20260727132046" xmlns="http://pathvisio.org/GPML/2013a" Name="Insulin signaling (demo)" Organism="Homo sapiens">
+<Pathway Version="WP5641_r20260727132104" xmlns="http://pathvisio.org/GPML/2013a" Name="Insulin signaling (demo)" Organism="Homo sapiens">
   <Graphics BoardWidth="480.0" BoardHeight="440.0" />
   <Comment>Demo pathway: insulin (INS) activates its receptor INSR, which signals through IRS1.</Comment>
 
