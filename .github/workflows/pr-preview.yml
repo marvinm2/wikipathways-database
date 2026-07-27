@@ -262,7 +262,9 @@ jobs:
           header="<!-- wikipathways-pr-preview -->
           ## WikiPathways PR preview
 
-          Generated review artifacts for the changed pathway(s). Full render + tables are in the **pr-preview** artifact on this run.
+          Validation and metadata for the changed pathway(s). The **pr-preview** artifact on this run holds the tables (\`-datanodes.tsv\`, \`-refs.tsv\`, \`-bibliography.tsv\`, \`-info.json\`) and the pvjson.
+
+          There is no picture here: GitHub comments cannot embed an artifact, and the visual before/after render is drawn in the curation app, which links back to this PR.
           "
           printf '%s\n%s' "$header" "$full" > preview/comment.md
 
