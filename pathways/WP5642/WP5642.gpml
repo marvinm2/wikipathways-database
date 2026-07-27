@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway Author="[marvinm2]" Version="WP5642_r20260727144327" xmlns="http://pathvisio.org/GPML/2013a" Name="Insulin signaling (demo)" Organism="Homo sapiens">
+<Pathway Author="[marvinm2]" Version="WP5642_r20260727144527" xmlns="http://pathvisio.org/GPML/2013a" Name="Insulin signaling (demo)" Organism="Homo sapiens">
   <Graphics BoardWidth="480.0" BoardHeight="440.0" />
   <Comment Source="WikiPathways-description">Demo pathway: insulin (INS) activates its receptor INSR, which signals through IRS1.</Comment>
 
@@ -13,10 +13,10 @@
     <Xref Database="Ensembl" ID="ENSG00000171105" />
   </DataNode>
 
-  <!-- Deliberately unannotated: no Xref identifier. The auto-checklist will flag this. -->
+  <!-- Now annotated with its Ensembl identifier. -->
   <DataNode TextLabel="IRS1" Type="GeneProduct">
     <Graphics CenterX="240.0" CenterY="320.0" Width="120.0" Height="34.0" Color="1a5276" />
-    <Xref Database="" ID="" />
+    <Xref Database="Ensembl" ID="ENSG00000169047" />
   </DataNode>
 
   <Interaction>
@@ -34,4 +34,13 @@
   </Interaction>
 
   <OntologyTerm Term="insulin signaling pathway" ID="PW:0000143" Ontology="Pathway Ontology" />
+
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ref1">
+      <bp:ID>12829793</bp:ID>
+      <bp:DB>PubMed</bp:DB>
+      <bp:TITLE>IRS proteins and the common path to diabetes</bp:TITLE>
+    </bp:PublicationXref>
+  </Biopax>
 </Pathway>
