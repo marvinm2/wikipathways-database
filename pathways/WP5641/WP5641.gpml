@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway Version="WP5641_r20260727074826" xmlns="http://pathvisio.org/GPML/2013a" Name="TP53–MDM2 feedback (demo)" Organism="Homo sapiens">
+  <Graphics BoardWidth="620.0" BoardHeight="360.0" />
+  <DataNode TextLabel="TP53" GraphId="d1001" Type="GeneProduct">
+    <Graphics CenterX="180.0" CenterY="140.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="333333" />
+    <Xref Database="Ensembl" ID="ENSG00000141510" />
+  </DataNode>
+  <DataNode TextLabel="MDM2" GraphId="d1002" Type="GeneProduct">
+    <Graphics CenterX="420.0" CenterY="140.0" Width="90.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle" Color="333333" />
+    <Xref Database="Ensembl" ID="ENSG00000135679" />
+  </DataNode>
+  <DataNode TextLabel="CDKN2A" GraphId="d1003" Type="GeneProduct">
+    <Graphics CenterX="300.0" CenterY="250.0" Width="90.0" Height="25.0" ZOrder="32770" FontSize="12" Valign="Middle" Color="333333" />
+    <Xref Database="Ensembl" ID="ENSG00000147889" />
+  </DataNode>
+  <Interaction GraphId="i2001">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="225.0" Y="140.0" GraphRef="d1001" RelX="1.0" RelY="0.0" />
+      <Point X="375.0" Y="140.0" GraphRef="d1002" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="i2002">
+    <Graphics ZOrder="12289" LineThickness="1.0">
+      <Point X="420.0" Y="152.5" GraphRef="d1002" RelX="0.0" RelY="1.0" />
+      <Point X="322.5" Y="250.0" GraphRef="d1003" RelX="0.5" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="i2003">
+    <Graphics ZOrder="12290" LineThickness="1.0">
+      <Point X="277.5" Y="250.0" GraphRef="d1003" RelX="-0.5" RelY="0.0" />
+      <Point X="180.0" Y="152.5" GraphRef="d1001" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax />
+</Pathway>
