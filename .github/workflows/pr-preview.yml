@@ -205,8 +205,16 @@ jobs:
             org="$(grep -o 'Organism="[^"]*"' "$f" | head -n1 | sed 's/Organism="//; s/"$//')"
             echo "organism: ${org:-<none>}"
             scripts/meta-data-action/configGenerator.sh "$org" || echo "::warning::configGenerator failed for $org"
+            # First arg MUST be the literal "local". meta-data-action's other mode downloads
+            # https://raw.githubusercontent.com/<repo>/main/<file> and describes THAT — so
+            # passing a repo name here generates info.json / datanodes.tsv / refs.tsv for the
+            # version already on main, silently ignoring the file under review. On a new
+            # pathway whose WPID happens to exist upstream that means previewing a completely
+            # different pathway; on an update it means previewing the pre-merge version.
+            # on_gpml_change.yml can pass a repo because it runs after the merge; a PR preview
+            # exists precisely to describe the not-yet-merged file, so it must read locally.
             java -jar meta-data-action-1.1.4-jar-with-dependencies.jar \
-              wikipathways/wikipathways-database "$f" "$(date --utc +%F)" gdb.config "$org" \
+              local "$f" "$(date --utc +%F)" gdb.config "$org" \
               || echo "::warning::meta-data-action failed for $wpid"
 
             mkdir -p "preview/$wpid"
